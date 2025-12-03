@@ -8,6 +8,8 @@ Note:
 1. some of url may change due depend on radio provider
 2. some of the radio station may be redistributed, you need to recheck it
 
+if you have request for a new radio station, or reporting broken link radio station, put it in issuea. we are trying to solved it, and once more, we are sorry for slow response. 
+
 The application use this can be found at google playstore https://play.google.com/store/apps/details?id=com.dedetok.radiowalkman&pcampaignid=web_share
 
 Thank you.
