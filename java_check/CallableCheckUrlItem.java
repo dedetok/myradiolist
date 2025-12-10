@@ -34,8 +34,9 @@ public class CallableCheckUrlItem implements Callable<RadioListItem> {
             URL url = new URL(myUrlString);
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("HEAD"); // Use HEAD to avoid downloading the content
-            connection.setConnectTimeout(5000);
-            connection.setReadTimeout(5000);
+            connection.setConnectTimeout(3000);
+            connection.setReadTimeout(3000);
+            connection.setRequestProperty("User-Agent", "Mozilla/5.0");
             // Connect and get response code
             connection.connect();
             responseCode = connection.getResponseCode();
@@ -65,6 +66,7 @@ public class CallableCheckUrlItem implements Callable<RadioListItem> {
             con.setConnectTimeout(3000); // fast timeout
             con.setReadTimeout(3000);
             con.setRequestMethod("GET");
+            con.setRequestProperty("User-Agent", "Mozilla/5.0");
 
             // Helps Icecast/Shoutcast servers respond correctly
             con.setRequestProperty("Icy-MetaData", "1");
