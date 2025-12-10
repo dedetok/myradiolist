@@ -127,9 +127,10 @@ public class GithubRepository {
         try (
             BufferedWriter writer = Files.newBufferedWriter(Paths.get(fileName));
             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
-                    .withDelimiter(';')
-                    .withQuote('"')
-                    .withHeader("Country", "City", "Radio", "Icon", "StreamURL", "IconStatus", "StreamStatus")
+                .withDelimiter(';')
+                .withQuote('"')
+                .withQuoteMode(QuoteMode.ALL)      // ⬅ FORCE quotes        
+                .withHeader("country", "city", "radio", "icon", "streamurl", "iconstatus", "streamstatus")
             )
         ) {
             for (Future<RadioListItem> future : futures) {
